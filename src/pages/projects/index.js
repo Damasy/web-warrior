@@ -51,12 +51,10 @@ export const query = graphql`
           title
           thumb {
 						childImageSharp {
-							gatsbyImageData
-            }
-          }
-          featuredImg{
-						childImageSharp {
-							gatsbyImageData
+							gatsbyImageData(
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }
