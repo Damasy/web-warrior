@@ -11,14 +11,18 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `notes`,
-        path: `${__dirname}/src/notes/`,
+        path: `${__dirname}/src/projects/`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        name: `notes`,
-        path: `${__dirname}/src/projects/`,
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [],
       },
     },
   ],
